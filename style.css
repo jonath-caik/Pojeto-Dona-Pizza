@@ -7,7 +7,7 @@
 
 :root {
     --darkverde: rgb(0,44,42);
-    --verde: rgb(0,161,78);
+    --branco: rgb(255, 255, 255);
     --vermelho: rgb(231,27,36);
     --amarelo: rgb(241,192,5);
     --lightvermelho: rgb(218, 51, 59);
@@ -281,7 +281,7 @@ body.dark #article-2 {
 }
 
 #article-2 .titulo p {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 #article-2 .caixa-reco {
@@ -301,11 +301,11 @@ body.dark #article-2 {
 }
 
 #article-2 .caixa-reco .caixa-suges h4 {
-    font-size: 19px;
+    font-size: 24px;
 }
 
 #article-2 .caixa-reco .caixa-suges p {
-    font-size: smaller;
+    font-size: 16px;
 }
 
 #article-2 .art-botao {
@@ -417,7 +417,7 @@ body.dark #article-4 .caixa-mapa {
 }
 
 #article-4 .caixa-mapa h2{
-    color: rgb(17, 76, 46);
+    color: rgb(0,44,42);
     font-size: 35px;
     letter-spacing: 0.8px;
     margin-bottom: 1.5rem;
