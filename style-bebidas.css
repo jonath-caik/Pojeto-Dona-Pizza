@@ -283,10 +283,13 @@ footer .rodape img {
     width: 5rem;
     margin-bottom: 1rem;
 }
-
+footer .rodape p.dark {
+color: var(--branco-sutil);
+}
 footer .rodape p {
     line-height: 1.5;
     font-size: 13px;
+    color: var(--branco-sutil);
 }
 
 @media screen and (max-width: 768px) {
