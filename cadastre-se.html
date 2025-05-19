@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Dona Pizza</title>
+  
+  <link rel="stylesheet" href="cadastre-se.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="container">
+
+    <header>
+      <div class="logo">
+        <a href="index.html"><img style="width: 50px;" src="LOGO.png" alt="Logo"></a>
+      </div>
+
+      <div class="menu">
+        <button class="hamburger" aria-label="Menu">&#9776;</button>
+
+        <nav class="nav">
+          <div class="cardapio"><a href="CARDAPIO.html">CARDÁPIO</a></div>
+          <div class="bebidas"><a href="BEBIDAS.HTML">BEBIDAS</a></div>
+          <div class="contatos"><a href="contato.html">CONTATOS</a></div>
+          <div class="endereco"><a href="login.html">LOGIN</a></div>
+        </nav>
+        <div class="pecaagora"><a href="https://shop.beetech.com.br/donapizza/">PEÇA AGORA</a></div>
+      </div>
+
+      <div class="DL">
+        <input type="checkbox" class="checkbox" id="botao-tema">
+        <label class="label" for="botao-tema">
+          <i><img src="imagens/sol.png" alt=""></i>
+          <i><img src="imagens/lua.png" alt=""></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </header>
+
+    <main class="claro">
+      <div class="container">
+        <div id="img-cadastro">
+        <img src="LOGO.png" width="100px" alt="Donnapizzaz"> </div>
+        <form id="form-cadastro">
+            
+          <h1>CADASTRE-SE</h1>
+
+          <div class="input-box">
+            <label for="nome">Nome:</label><br>
+            <input placeholder="Nome completo" type="text" id="nome" required>
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <label for="email">Email:</label><br>
+            <input placeholder="E-mail" type="email" id="email" required>
+            <i class="bx bxs-envelope"></i>
+          </div>
+
+          <div class="input-box">
+            <label for="senha">Senha:</label><br>
+            <input placeholder="Crie uma senha" type="password" id="senha" required>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+<div>
+          <button type="submit" class="login">Cadastrar</button></div> <br>
+          
+
+          <div class="register-link">
+            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+          </div>
+
+        </form>
+        <div id="voltar"> <button><a href="index.html"> voltar</a></button></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="rodape">
+        <img src="LOGO.png" alt="Donnapizzaz">
+        <p>© 2025 Pizzaria Donna Pizza.</p>
+        <p>Todos os direitos reservados</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="cadastro.js"></script>
+   <!-- Se o login.js lida com modo escuro/menu -->
+</body>
+</html>
+
+
+

@@ -45,54 +45,56 @@ body.dark {
     color: white;
 }
 
-#container { /*ajuste de todo a disposição do conteudo no copor*/
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "article"
-    "main"
-    "footer";
-    grid-template-columns: auto;
-    
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header { /*cabeçalho*/
+header {
     grid-area: header;
     background-color: var(--darkverde);
     display: flex;
-    max-width: 100vw;
+    width: 100%;
     height: 13vh;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 header .logo {
-    justify-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .logo img {
     height: 65px;
     width: auto;
+    transition: transform 0.2s;
 }
 
 header .logo img:hover {
     transform: scale(1.2);
-    transition: 0.2s;
     cursor: pointer;
 }
 
-  .nav {
+.nav {
     display: flex;
     gap: 1.5rem;
 }
-  
-  .nav a {
+
+.nav a {
     color: white;
     text-decoration: none;
 }
-  
-  .hamburger {
+
+.hamburger {
     display: none;
     font-size: 2rem;
     background: none;
@@ -101,42 +103,39 @@ header .logo img:hover {
     cursor: pointer;
 }
 
-header .menu { /*menu - peca agora*/
+header .menu {
     display: flex;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 1rem; /*distancia menus - pecaagora*/
 }
 
-header .menu nav { /*MENUS*/
+header .menu nav {
     display: flex;
     gap: 1.5rem;
-    
 }
 
-header .menu nav a{
+header .menu nav a {
     color: white;
     font-size: large;
     font-weight: 500;
-
-    
 }
 
-header .menu nav a:hover{
+header .menu nav a:hover {
     color: var(--vermelho);
     border-bottom: 0.1rem solid var(--vermelho);
     padding-bottom: 0.1rem;
     transition: 0.3s linear;
 }
 
-header .menu .pecaagora { /*peça agora*/
+header .menu .pecaagora {
     background-color: var(--vermelho);
     padding: 10px;
     border-radius: 20px;
 }
 
-header .menu .pecaagora a{
+header .menu .pecaagora a {
     color: white;
     font-size: large;
     font-weight: 500;
@@ -147,32 +146,30 @@ header .menu .pecaagora:hover {
     transition: 0.2s;
 }
 
-header .DL { /*Inicio Acessibilidade modo D e L*/
-    justify-self: end;
-    margin-right: 5vh;
+header .DL {
+    display: flex;
+    align-items: center;
 }
 
 .DL .checkbox {
     opacity: 0;
     position: absolute;
 }
-  
+
 .DL .label {
     background-color: #000000;
     border-radius: 50px;
     cursor: pointer;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 5px;
     position: relative;
     height: 26px;
     width: 50px;
     transform: scale(1.5);
 }
-  
+
 .DL .label .ball {
     background-color: #fff;
     border-radius: 50%;
@@ -184,179 +181,154 @@ header .DL { /*Inicio Acessibilidade modo D e L*/
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
-  
+
 .DL .checkbox:checked + .label .ball {
-      transform: translateX(24px);
-      background-color: #272626;
+    transform: translateX(24px);
+    background-color: #272626;
 }
-  
+
 .DL .fa-moon {
     color: #f1c40f;
 }
-  
+
 .DL .fa-sun {
     color: #f39c12;
-} /*fim Acessibilidade modo D e L*/
+}
 
 main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.container {
-    max-width: 400vw;
-    padding: 30px 40px;
-    border-radius: 12px ;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    grid-area: main;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    background-color: rgba(35, 34, 34, 0.158); /* Claro padrão */
-    color:  rgb(0,44,42);
-  }
+    align-items: center;
+    margin: 2rem 0;
+}
 
-  .container h1{
-    font-size: 36px;
-    text-align: center;
-  }
-  
-  .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-  }
-
-  .input-box input{
-    width: 100%;
-    height: 100%;
-    background-color: transparent ;
-    border: solid 1px;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #000000;
-    padding: 20px 45px 20px 20px;
-
-  }
-
-  
-   .input-box input::placeholder{
-    color: #557671;
-   }
-
-   .input-box i{
-    position: absolute;
-    right: 20px ;
-    top: 70%;
-    font-size: 20px;
-   }
-
-   .remember-forgot{
+main.claro .container {
+    background-color: var(--cinza-claro);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 3rem auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
-    margin: -10px 0 15px;
-   }
+    flex-direction: column;
+    align-items: center;
+}
 
-   .remember-forgot label input{
-    accent-color: rgb(27, 73, 41) ;
-    margin-right: 5px;
-   }
-
-   .remember-forgot a {
-    text-transform: none;
-    
-   }
-
-   .remember-forgot a:hover{
-    text-decoration: underline;
-
-   }
-
-   .login{
-    width: 100%;
-    height: 50px;
-    background-color: lab(20.24% -16.16 2.35);
-    color: white;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    margin-bottom: 10px;
-    margin-top: 10px;
-   }
-
-   .login:hover{
-    background-color: #006512;
-    transition: 0.2s;
-    box-shadow:0 0 10px #054111;
-   }
-
-   .register-link{
-    font-size: 14px;
-    margin: 20px 0 ;
+main h1 {
     text-align: center;
-   }
+    margin-bottom: 1.5rem;
+    color: #f10404;
+}
 
-   .register-link a{
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.8rem 2.5rem 0.8rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f9f7f7;
+    color: #000;
+    font-size: 1rem;
+}
+
+.input-box input::placeholder {
+    color: #00000057;
+}
+
+.input-box i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f9bf03;
+}
+
+.login {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #006400;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #228B22;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.register-link a {
+    color: #07fd30;
     text-decoration: none;
-    font-weight: 500;
-   }
+    font-weight: bold;
+}
 
-   .register-link a:hover{
+.register-link a:hover {
     text-decoration: underline;
+}
 
-   }
+.error {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #6d0404;
+}
 
+.container #img-cadastro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-
-
-  body.dark .container {
-    background-color: var(--cinza-medio);
-    color: var(--darkverde);
-    
-  }
-
-
-  footer {
+footer {
     grid-area: footer;
-    max-width: 100vw;
+    width: 100%;
     background-color: var(--darkverde);
 }
 
-  footer .rodape {
+footer .rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2.5rem;
 }
 
-  footer .rodape img {
-    height: auto;
+footer .rodape img {
     width: 5rem;
     margin-bottom: 1rem;
 }
 
-  footer .rodape p {
+footer .rodape p {
     color: white;
     line-height: 1.5;
     font-size: 13px;
 }
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
     header .menu nav {
         display: none;
     }
 
     header {
-        height: 13vh;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
     }
 
     .nav {
-        position: absolute;
+      position: absolute;
         top: 70px;
         left: 0;
         background-color: #004d40;
@@ -364,36 +336,36 @@ main {
         flex-direction: column;
         align-items: center;
         display: none;
-      }
-    
-      .nav.active {
+    }
+
+    .nav.active {
         display: flex;
         gap: 2rem;
         padding: 2rem 0rem 2rem 0rem;
-      }
-    
-      .hamburger {
+    }
+
+    .hamburger {
         display: block;
-      }
+    }
 
     header .logo {
-        margin: auto;
+        justify-content: center;
+        width: 10%;
+        margin-bottom: 1rem;
     }
 
     header .logo img {
         height: 60px;
     }
 
-    header .menu .pecaagora {
-        display: flex;
-        gap: 1.5rem;
+    main.claro .container {
+        width: 90%;
+        padding: 1.5rem;
+        margin: 2rem auto;
     }
 
-    header .DL {
-        margin-left: 1.2rem;
-        display: flex;
-        gap: 1rem;
+    .input-box input,
+    .login {
+        font-size: 1rem;
     }
-
-    
-  }
+}
