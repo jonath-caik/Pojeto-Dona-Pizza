@@ -252,6 +252,7 @@ main {
     right: 20px ;
     top: 70%;
     font-size: 20px;
+    color: #9f9a00fb;;
    }
 
    .remember-forgot{
@@ -267,6 +268,7 @@ main {
 
    .remember-forgot a {
     text-transform: none;
+    color: #550303;;
     
    }
 
@@ -304,6 +306,7 @@ main {
    .register-link a{
     text-decoration: none;
     font-weight: 500;
+    color: #550303;
    }
 
    .register-link a:hover{

@@ -204,12 +204,12 @@ main {
 }
 
 main.claro .container {
-    background-color: var(--cinza-claro);
+    background-color: var(--branco-sutil);
     padding: 2rem;
     border-radius: 12px;
     max-width: 400px;
     margin: 3rem auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,7 +218,7 @@ main.claro .container {
 main h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #f10404;
+    color: rgb(0,44,42);;
 }
 
 .input-box {
@@ -230,39 +230,42 @@ main h1 {
 .input-box input {
     width: 100%;
     padding: 0.8rem 2.5rem 0.8rem 0.8rem;
-    border: none;
+    border: solid 1px;
     border-radius: 8px;
-    background-color: #f9f7f7;
+    background-color: transparent;
     color: #000;
     font-size: 1rem;
 }
 
 .input-box input::placeholder {
-    color: #00000057;
+    color: #0d231a57;
 }
 
 .input-box i {
     position: absolute;
-    right: 1rem;
+    right: 20px;
     top: 50%;
-    transform: translateY(-50%);
-    color: #f9bf03;
+    color: #9f9a00fb;
 }
 
 .login {
     width: 100%;
     padding: 0.8rem;
-    background-color: #006400;
+    background-color: lab(20.24% -16.16 2.35);
     border: none;
     border-radius: 8px;
     color: #fff;
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .login:hover {
-    background-color: #228B22;
+    background-color: #006512;
+    box-shadow: 0 0 10px #054111;
+    transition: 0.2s;
+
 }
 
 .register-link {
@@ -271,7 +274,7 @@ main h1 {
 }
 
 .register-link a {
-    color: #07fd30;
+    color: #773d19;
     text-decoration: none;
     font-weight: bold;
 }
@@ -283,7 +286,7 @@ main h1 {
 .error {
     text-align: center;
     margin-bottom: 1rem;
-    color: #6d0404;
+    color: #550303;
 }
 
 .container #img-cadastro {
