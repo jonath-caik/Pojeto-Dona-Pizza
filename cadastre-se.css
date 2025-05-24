@@ -74,7 +74,6 @@ header .logo {
 }
 
 header .logo img {
-    height: 65px;
     width: auto;
     transition: transform 0.2s;
 }
