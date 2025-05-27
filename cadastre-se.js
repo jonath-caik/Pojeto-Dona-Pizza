@@ -1,12 +1,37 @@
- 
-document.addEventListener("DOMContentLoaded", function () {
-  // Modo escuro
-  const modo = document.getElementById('botao-tema');
-  if (modo) {
-    modo.addEventListener('change', () => {
-      document.body.classList.toggle('dark');
+ // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica o tema salvo no localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const isDark = savedTheme === 'dark';
+
+    // Aplica o tema e a posição do botão
+    if (isDark) {
+        body.classList.add('dark-mode');
+        themeToggle.checked = true;
+    }
+
+    // Alterna o tema quando o botão é clicado
+    themeToggle.addEventListener('change', () => {
+        const isDark = themeToggle.checked;
+        body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
-  }
+
+    // Sincroniza entre abas (opcional)
+    window.addEventListener('storage', (event) => {
+        if (event.key === 'theme') {
+            const isDark = event.newValue === 'dark';
+            body.classList.toggle('dark-mode', isDark);
+            themeToggle.checked = isDark;
+        }
+    });
+});
+
+
+
 const hamburger = document.querySelector('.hamburger'); //NAV-bAR
 const nav = document.querySelector('.nav');
 
@@ -48,5 +73,5 @@ hamburger.addEventListener('click', () => {
     alert("Cadastro realizado com sucesso!");
     window.location.href = "login.html";
   });
-})})
+})
 

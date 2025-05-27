@@ -150,51 +150,52 @@ header .DL { /*Inicio Acessibilidade modo D e L*/
   margin-right: 5vh;
 }
 
-.DL .checkbox {
-  opacity: 0;
-  position: absolute;
+/* Estilo do toggle switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.DL .label {
-  background-color: #000000;
-  border-radius: 50px;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 5px;
-  position: relative;
-  height: 26px;
-  width: 50px;
-  transform: scale(1.5);
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.DL .label .ball {
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
 
-.DL .checkbox:checked + .label .ball {
-    transform: translateX(24px);
-    background-color: #272626;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
 }
 
-.DL .fa-moon {
-  color: #f1c40f;
+input:checked + .slider {
+    background-color: #f32121;
 }
 
-.DL .fa-sun {
-  color: #f39c12;
-} /*fim Acessibilidade modo D e L*/
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+/*fim Acessibilidade modo D e L*/
 
 main {
   grid-area: main;
