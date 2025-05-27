@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav').classList.toggle('active');
+});
+
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 

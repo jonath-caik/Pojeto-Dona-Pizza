@@ -381,7 +381,7 @@ footer .rodape p {
         gap: 1.5rem;
     }
 
-    header .DL {
+    header .theme-switch-wrapper {
         margin-left: 1.2rem;
         display: flex;
         gap: 1rem;

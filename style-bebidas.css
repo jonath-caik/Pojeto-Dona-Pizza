@@ -295,6 +295,7 @@ footer .rodape p {
 }
 
 @media screen and (max-width: 768px) {
+   
     header .menu nav {
         display: none;
     }
@@ -320,8 +321,9 @@ footer .rodape p {
         padding: 2rem 0rem 2rem 0rem;
       }
     
-      .hamburger {
+      header .hamburger {
         display: block;
+        
       }
 
     header .logo {
@@ -337,7 +339,7 @@ footer .rodape p {
         gap: 1.5rem;
     }
 
-    header .DL {
+    header .theme-switch-wrapper {
         margin-left: 1.2rem;
         display: flex;
         gap: 1rem;

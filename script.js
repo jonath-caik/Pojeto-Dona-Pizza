@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav').classList.toggle('active');
+});
+
 
 const hamburger = document.querySelector('.hamburger'); //NAV-bAR
 const nav = document.querySelector('.nav');

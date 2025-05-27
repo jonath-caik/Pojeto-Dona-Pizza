@@ -506,7 +506,7 @@ footer .rodape p {
         gap: 1.5rem;
     }
 
-    header .DL {
+    header .theme-switch-wrapper {
         margin-left: 1.2rem;
         display: flex;
         gap: 1rem;
@@ -582,9 +582,7 @@ footer .rodape p {
     #article-3 #contato-direita img{
         max-width: 100%;
     }
-    #article-3 #contato-direita img{
-        max-width: 100%;
-    }
+    
 
     #article-4 .caixa-mapa .mapa iframe{
         width: 90vw;
