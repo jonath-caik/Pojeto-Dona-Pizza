@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificar tema salvo
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme === 'dark';
-    
+
     // Aplicar tema inicial
     if (isDark) {
         body.classList.add('dark');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
+document.querySelector('.hamburger').addEventListener('click', function () {
     document.querySelector('.nav').classList.toggle('active');
 });
 
@@ -52,7 +52,7 @@ const hamburger = document.querySelector('.hamburger'); //NAV-bAR
 const nav = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
+    nav.classList.toggle('active');
 });
 
 

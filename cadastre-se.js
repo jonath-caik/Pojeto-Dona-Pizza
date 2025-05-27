@@ -1,77 +1,68 @@
- // script.js
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
+    // Elementos
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
 
-    // Verifica o tema salvo no localStorage
+    // Verificar tema salvo
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme === 'dark';
-
-    // Aplica o tema e a posição do botão
+    
+    // Aplicar tema inicial
     if (isDark) {
-        body.classList.add('dark-mode');
-        themeToggle.checked = true;
+        body.classList.add('dark');
+        if (themeToggle) themeToggle.checked = true;
     }
 
-    // Alterna o tema quando o botão é clicado
-    themeToggle.addEventListener('change', () => {
-        const isDark = themeToggle.checked;
-        body.classList.toggle('dark-mode', isDark);
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
+    // Listener para toggle de tema
+    if (themeToggle) {
+        themeToggle.addEventListener('change', () => {
+            const isDark = themeToggle.checked;
+            body.classList.toggle('dark', isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
 
-    // Sincroniza entre abas (opcional)
+    // Listener para menu hamburguer
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
+
+    // Sincronizar entre abas
     window.addEventListener('storage', (event) => {
         if (event.key === 'theme') {
             const isDark = event.newValue === 'dark';
-            body.classList.toggle('dark-mode', isDark);
-            themeToggle.checked = isDark;
+            body.classList.toggle('dark', isDark);
+            if (themeToggle) themeToggle.checked = isDark;
         }
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const formLogin = document.querySelector("form");
 
-
-const hamburger = document.querySelector('.hamburger'); //NAV-bAR
-const nav = document.querySelector('.nav');
-
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
-  document.addEventListener("DOMContentLoaded", function () {
-  const formCadastro = document.getElementById("form-cadastro");
-
-  formCadastro.addEventListener("submit", function (e) {
+  formLogin.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const nome = document.getElementById("nome").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const senha = document.getElementById("senha").value.trim();
+    const email = document.querySelector("input[type='email']").value.trim();
+    const senha = document.querySelector("input[type='password']").value.trim();
 
-    if (!nome || !email || !senha) {
-      alert("Preencha todos os campos.");
-      return;
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuarioValido = usuarios.find(
+      usuario => usuario.email === email && usuario.senha === senha
+    );
+
+    if (usuarioValido) {
+      alert(`Bem-vindo, ${usuarioValido.nome}!`);
+      // Aqui você pode redirecionar para o cardápio, por exemplo:
+      window.location.href = "CARDAPIO.html";
+    } else {
+      alert("Email ou senha incorretos.");
     }
-
-    // Pega os usuários salvos
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    // Verifica se já existe o email
-    const jaExiste = usuarios.some(usuario => usuario.email === email);
-
-    if (jaExiste) {
-      alert("Este e-mail já está cadastrado.");
-      return;
-    }
-
-    // Adiciona novo usuário
-    usuarios.push({ nome, email, senha });
-
-    // Salva de volta
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    alert("Cadastro realizado com sucesso!");
-    window.location.href = "login.html";
   });
-})
-
+});

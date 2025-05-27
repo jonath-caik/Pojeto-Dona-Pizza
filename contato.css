@@ -6,21 +6,21 @@
 */
 
 :root {
-    --darkverde: rgb(0,44,42);
-    --verde: rgb(0,161,78);
-    --vermelho: rgb(231,27,36);
-    --lightvermelho: rgb(218, 51, 59);
-    --darkvermelho: rgb(138, 26, 32);
-    --amarelo: rgb(241,192,5);
+  --darkverde: rgb(0, 44, 42);
+  --verde: rgb(0, 161, 78);
+  --vermelho: rgb(231, 27, 36);
+  --lightvermelho: rgb(218, 51, 59);
+  --darkvermelho: rgb(138, 26, 32);
+  --amarelo: rgb(241, 192, 5);
 
-    --fundo: #0D0D0D;
-    --fundo-secundario: #1A1A1A;
-    --branco-sutil: #E5E5E5;
-    --cinza-claro: #AAAAAA;
-    --mostarda: #F1A208;
-    --fundo-terciario: #2A2A2A;
-    --cinza-medio: #666666;
-    --cinza-escuro: #444444;
+  --fundo: #0D0D0D;
+  --fundo-secundario: #1A1A1A;
+  --branco-sutil: #E5E5E5;
+  --cinza-claro: #AAAAAA;
+  --mostarda: #F1A208;
+  --fundo-terciario: #2A2A2A;
+  --cinza-medio: #666666;
+  --cinza-escuro: #444444;
 }
 
 * {
@@ -32,10 +32,10 @@
 
 body {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-column: 100vw;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -45,16 +45,18 @@ body.dark {
   background-color: #2c2a2a;
   color: white;
 }
+
 #container {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-columns: auto;
 }
 
-header { /*cabeçalho*/
+header {
+  /*cabeçalho*/
   grid-area: header;
   background-color: var(--darkverde);
   display: flex;
@@ -99,42 +101,46 @@ header .logo img:hover {
   cursor: pointer;
 }
 
-header .menu { /*menu - peca agora*/
+header .menu {
+  /*menu - peca agora*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /*distancia menus - pecaagora*/
+  gap: 1rem;
+  /*distancia menus - pecaagora*/
 }
 
-header .menu nav { /*MENUS*/
+header .menu nav {
+  /*MENUS*/
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-header .menu nav a{
+header .menu nav a {
   color: white;
   font-size: large;
   font-weight: 500;
-  
-  
+
+
 }
 
-header .menu nav a:hover{
+header .menu nav a:hover {
   color: var(--vermelho);
   border-bottom: 0.1rem solid var(--vermelho);
   padding-bottom: 0.1rem;
   transition: 0.3s linear;
 }
 
-header .menu .pecaagora { /*peça agora*/
+header .menu .pecaagora {
+  /*peça agora*/
   background-color: var(--vermelho);
   padding: 10px;
   border-radius: 20px;
 }
 
-header .menu .pecaagora a{
+header .menu .pecaagora a {
   color: white;
   font-size: large;
   font-weight: 500;
@@ -145,56 +151,58 @@ header .menu .pecaagora:hover {
   transition: 0.2s;
 }
 
-header .DL { /*Inicio Acessibilidade modo D e L*/
+header .DL {
+  /*Inicio Acessibilidade modo D e L*/
   justify-self: end;
   margin-right: 5vh;
 }
 
 /* Estilo do toggle switch */
 .theme-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
 .theme-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
 }
 
-input:checked + .slider {
-    background-color: #f32121;
+input:checked+.slider {
+  background-color: #f32121;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+input:checked+.slider:before {
+  transform: translateX(26px);
 }
+
 /*fim Acessibilidade modo D e L*/
 
 main {
@@ -203,6 +211,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
 .caixa-branca {
   grid-area: main;
   display: flex;
@@ -248,7 +257,8 @@ body.dark .caixa-branca .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;  /* Espaço entre os ícones */
+  gap: 20px;
+  /* Espaço entre os ícones */
   font-size: 14px;
   align-items: center;
 }
@@ -320,7 +330,8 @@ form {
   gap: 12px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #bbb;
@@ -336,12 +347,15 @@ body.dark textarea {
 
 .duplo {
   display: flex;
-  gap: 10px; /* Espaçamento entre os campos de input */
+  gap: 10px;
+  /* Espaçamento entre os campos de input */
 }
 
 .duplo input {
-  flex: 1;  /* Garante que os inputs ocupem o mesmo espaço */
+  flex: 1;
+  /* Garante que os inputs ocupem o mesmo espaço */
 }
+
 button[type="submit"] {
   background-color: #d62828;
   color: white;
@@ -351,6 +365,7 @@ button[type="submit"] {
   border-radius: 6px;
   cursor: pointer;
 }
+
 iframe {
   width: 60vw;
   height: 50vh;
@@ -358,7 +373,7 @@ iframe {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   align-self: center;
-  }
+}
 
 footer {
   grid-area: footer;
@@ -404,7 +419,7 @@ footer .rodape p {
     flex-direction: column;
     align-items: center;
     display: none;
-    }
+  }
 
   .nav.active {
     display: flex;
@@ -436,7 +451,8 @@ footer .rodape p {
   }
 
   .duplo {
-    flex-direction: column; /* Para telas menores, os inputs ficam em coluna */
+    flex-direction: column;
+    /* Para telas menores, os inputs ficam em coluna */
   }
 
   .telefone-item {

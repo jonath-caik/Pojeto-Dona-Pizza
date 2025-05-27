@@ -6,10 +6,10 @@
 */
 
 :root {
-    --darkverde: rgb(0,44,42);
-    --verde: rgb(0,161,78);
-    --vermelho: rgb(231,27,36);
-    --amarelo: rgb(241,192,5);
+    --darkverde: rgb(0, 44, 42);
+    --verde: rgb(0, 161, 78);
+    --vermelho: rgb(231, 27, 36);
+    --amarelo: rgb(241, 192, 5);
 
     --fundo: #0D0D0D;
     --fundo-secundario: #1A1A1A;
@@ -22,22 +22,22 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
-  display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
-  grid-column: 100vw;
-  font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
-  min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-column: 100vw;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 body.dark {
@@ -144,6 +144,7 @@ header .menu .pecaagora:hover {
     transform: scale(1.1);
     transition: 0.2s;
 }
+
 /* Estilo do toggle switch */
 .theme-switch {
     position: relative;
@@ -182,11 +183,11 @@ header .menu .pecaagora:hover {
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #f32121;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -213,7 +214,8 @@ main.claro .container {
 main h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: rgb(0,44,42);;
+    color: rgb(0, 44, 42);
+    ;
 }
 
 .input-box {
@@ -293,12 +295,12 @@ main h1 {
 body.dark .container {
     background-color: var(--cinza-medio);
     color: var(--darkverde);
-  }
+}
 
-body.dark .input-box input::placeholder{
-    color: var(--cinza-escuro) ;
-    
-  }
+body.dark .input-box input::placeholder {
+    color: var(--cinza-escuro);
+
+}
 
 
 
@@ -344,7 +346,7 @@ footer .rodape p {
     }
 
     .nav {
-      position: absolute;
+        position: absolute;
         top: 70px;
         left: 0;
         background-color: #004d40;

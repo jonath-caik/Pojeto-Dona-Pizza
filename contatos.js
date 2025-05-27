@@ -1,4 +1,4 @@
-document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+document.getElementById('feedbackForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
     const sobrenome = document.getElementById('sobrenome').value;
@@ -11,7 +11,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     const url = `https://wa.me/5571987483645?text=${texto}`;
 
     window.open(url, '_blank');
-  });
+});
 
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificar tema salvo
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme === 'dark';
-    
+
     // Aplicar tema inicial
     if (isDark) {
         body.classList.add('dark');
@@ -58,22 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
+document.querySelector('.hamburger').addEventListener('click', function () {
     document.querySelector('.nav').classList.toggle('active');
 });
 
-  const hamburger = document.querySelector('.hamburger'); // NAV-BAR
-  const nav = document.querySelector('.nav');
+const hamburger = document.querySelector('.hamburger'); // NAV-BAR
+const nav = document.querySelector('.nav');
 
-  hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
 const textarea = document.getElementById('mensagem'); //Inicio contador
 const contador = document.getElementById('contador');
 
-textarea.addEventListener('input', function() {
-  const caracteresDigitados = textarea.value.length;
-  const caracteresMax = textarea.getAttribute('maxlength');
-  contador.textContent = `${caracteresDigitados}/${caracteresMax}`;
+textarea.addEventListener('input', function () {
+    const caracteresDigitados = textarea.value.length;
+    const caracteresMax = textarea.getAttribute('maxlength');
+    contador.textContent = `${caracteresDigitados}/${caracteresMax}`;
 });
