@@ -303,12 +303,12 @@ main .caixatipo .quantidade h2 {
 
 main #contentpizza {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     margin-bottom: 2.5rem;
     max-width: 90vw;
-
     margin-left: 2vw;
+    
 }
 
 main #contentpizza #caixapizza {
@@ -316,9 +316,13 @@ main #contentpizza #caixapizza {
 }
 
 main #contentpizza #caixapizza .caixatexto h4 {
-    font-size: larger;
+    margin-bottom: 20px;
+    font-size: 28px;
     font-weight: bold;
+    margin-top: 20px;
+    padding-top: 15px;
 }
+
 
 .imgpizza {
     width: 50%;
@@ -354,11 +358,15 @@ footer .rodape p {
 
 .imagem-pizza {
   width: 100%;
-  max-width: 200px;
-  border-radius: 12px;
+  max-width: 100px;
+  object-fit: cover;
+  border-radius: 2px ;
   display: block;
   margin: 0;
+  float: left;
+  margin-right: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+  
 
 
 @media screen and (max-width: 768px) {

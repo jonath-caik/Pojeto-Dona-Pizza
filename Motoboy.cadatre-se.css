@@ -40,14 +40,14 @@ body {
   min-height: 100vh;
 }
 
+
+
 body.dark {
-  background-image: url(imagens/Brown\ Yellow\ Modern\ Bold\ Pizza\ Restaurant\ Presentation_20250520_165301_0000.png);
+  background-image: url(img_cardapios/bg-darkcardapio.jpg);
   color: white;
 }
 body{
-
-background-image: url(imagens/Brown\ Yellow\ Modern\ Bold\ Pizza\ Restaurant\ Presentation_20250520_165301_0000.png);
-
+background-image: url(img_cardapios/bg-lightcardapio20.png)
 
 }
  
