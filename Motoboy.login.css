@@ -48,6 +48,8 @@ body.dark {
 }
 body{
   background-image: url(img_cardapios/bg-lightcardapio20.png);
+  color: with
+  ;
 
 
 }
@@ -221,7 +223,7 @@ main {
   max-width: 400vw;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0px 10px rgb(251, 6, 6);
+  box-shadow: 0 0px 10px rgb(25, 25, 25);
   display: flex;
   flex-direction: column;
   gap: 40px;
