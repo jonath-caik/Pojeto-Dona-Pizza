@@ -41,10 +41,16 @@ body {
 }
 
 body.dark {
-  background-color: #2c2a2a;
+  background-image: url(imagens/Brown\ Yellow\ Modern\ Bold\ Pizza\ Restaurant\ Presentation_20250520_165301_0000.png);
   color: white;
 }
+body{
 
+background-image: url(imagens/Brown\ Yellow\ Modern\ Bold\ Pizza\ Restaurant\ Presentation_20250520_165301_0000.png);
+
+
+}
+ 
 #container {
   /*ajuste de todo a disposição do conteudo no copor*/
   display: grid;
@@ -54,6 +60,7 @@ body.dark {
     "main"
     "footer";
   grid-template-columns: auto;
+  
 
 }
 
@@ -214,11 +221,11 @@ main {
   max-width: 400vw;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 10px rgb(251, 251, 251);
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: rgba(35, 34, 34, 0.158);
+  background-color: rgb(219, 213, 213);
   /* Claro padrão */
   color: rgb(0, 44, 42);
 }

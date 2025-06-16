@@ -31,10 +31,11 @@
 body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+    background-image: url(img_cardapios/bg-lightcardapio20.png);
 }
 
 body.dark {
-    background-color: #000000;
+    background-image: url(img_cardapios/bg-darkcardapio.jpg);
     color: white;
 }
 
@@ -196,7 +197,7 @@ article {
     background-image: linear-gradient(rgba(0, 44, 42, 0.35)), url(img_cardapios/pizzabanner.jpg);
     background-repeat: repeat;
     /* Faz a imagem se repetir como um padrão */
-    background-size: auto;
+     background-size: 100%;
     /*contain'*/
     background-position: top left;
     color: white;
@@ -223,11 +224,14 @@ body.dark article h1 {
 main {
     grid-area: main;
     color: var(--darkverde);
-    background-color: var(--cinza-claro);
+    
 }
 
+
+
 body.dark main {
-    background-color: var(--fundo-terciario);
+    background-image: url(img_cardapios/bg-darkcardapio.jpg);
+     background-size: 100%;
 }
 
 main .caixa-cardapio {
@@ -347,6 +351,15 @@ footer .rodape p {
     line-height: 1.5;
     font-size: 13px;
 }
+
+.imagem-pizza {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  display: block;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+
 
 @media screen and (max-width: 768px) {
     header .menu nav {

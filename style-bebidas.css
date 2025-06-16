@@ -28,14 +28,16 @@
 
 body {
     color: white;
-    background-color: #ededed;
+    background-image:url(img_cardapios/bg-lightcardapio20.png); ;
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+     background-size: 100%;
 }
 
 body.dark {
-    background-color:var(--fundo-secundario);
+    background-image: url(img_cardapios/bg-darkcardapio.jpg);
     color: var(--darkverde);
+     background-size: 100%;
 }
 
 #container { /*ajuste de todo a disposição do conteudo no copor*/
@@ -149,7 +151,7 @@ header .menu .pecaagora:hover {
 }
 
 .theme-switch input {
-    opacity: 0;
+
     width: 0;
     height: 0;
 }
@@ -189,10 +191,10 @@ input:checked + .slider:before {
 /* troca img para dark*/
 article {
     grid-area: article;
-    background-image: linear-gradient( rgba(0, 44, 42, 0.35)), url(img_cardapios/bg-lightcardapio.jpg);
+    background-image: linear-gradient( rgba(0, 44, 42, 0)), url(img_cardapios/bg-lightcardapio.jpg);
     background-repeat: repeat; /* Faz a imagem se repetir como um padrão */
     background-size: cover; /*contain'*/
-    font-size: 200%;
+    font-size:200%;
     font-weight: 800;
     padding: 11vh;
     display: flex;
@@ -201,7 +203,7 @@ article {
 }
 
 body.dark article {
-    background-image: linear-gradient( rgba(0, 44, 42, 0.35)), url(img_cardapios/bg-darkcardapio.jpg);
+    background-image: linear-gradient( rgba(0, 44, 42, 0)), url(img_cardapios/bg-darkcardapio.jpg);
     color: var(--branco-sutil);
 }
 
@@ -215,7 +217,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
-    background-color:white;
+    background-color:var(--darkverde);
     gap: 4rem;
     max-width: 90vw;  
     border-radius: 8px;
@@ -224,7 +226,7 @@ main{
 }
 
 body.dark #containerbebidas {
-    background-color: var(--cinza-claro);
+    background-color: var(--darkverde);
 }
 
 #bebidas{
@@ -292,6 +294,13 @@ footer .rodape p {
     font-size: 13px;
     color: var(--branco-sutil);
 }
+.imagem-pizza {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
 
 @media screen and (max-width: 768px) {
    
@@ -350,4 +359,15 @@ footer .rodape p {
         max-width: 90vw;
         justify-content: center;
     }
+}
+
+ h1{
+color:black;}
+
+h3{ color: white;}
+p{
+    color: white;
+}
+.dark h1{
+color: white;
 }

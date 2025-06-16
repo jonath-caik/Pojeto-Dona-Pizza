@@ -42,7 +42,7 @@ body {
 }
 
 body.dark {
-  background-color: #2c2a2a;
+  background-image: url(img_cardapios/bg-darkcardapio.jpg);
   color: white;
 }
 
@@ -212,15 +212,19 @@ main {
   align-items: center;
 }
 
-.caixa-branca {
+.caixa-branca{
   grid-area: main;
   display: flex;
   justify-content: center;
-  background: var(--cinza-claro);
+      background-image:url(img_cardapios/bg-lightcardapio20.png); 
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-size: 100%;
   width: 100vw;
   padding: 2rem;
   padding: 2rem;
 }
+
 
 body.dark .caixa-branca {
   background-color: var(--fundo-terciario);
@@ -232,13 +236,16 @@ body.dark .caixa-branca {
   margin-bottom: 3rem;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(250, 4, 4, 0);
 }
 
 body.dark .caixa-branca .content {
   background-color: var(--cinza-claro);
 }
 
+main .dark .caixa-branca{
+
+background-image: url(img_cardapios/bg-darkcardapio.jpg);}
 .contatos {
   text-align: center;
 }
