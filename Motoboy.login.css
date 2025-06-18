@@ -42,14 +42,18 @@ body {
 }
 
 body.dark {
-  background-image: url(img_cardapios/bg-darkcardapio.jpg);
+   background-image: url(img_cardapios/bg-darkcardapio.jpg);
   color: white;;
+ font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-size: 100%;
   
 }
 body{
-  background-image: url(img_cardapios/bg-lightcardapio20.png);
-  color: with
-  ;
+   background-image:url(img_cardapios/bg-lightcardapio20.png); 
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-size: 100%;
 
 
 }

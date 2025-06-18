@@ -48,8 +48,10 @@ body.dark {
 }
 
 body{
-background-image: url(img_cardapios/bg-lightcardapio20.png)
-
+background-image:url(img_cardapios/bg-lightcardapio20.png); 
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-size: 100%;
 }
 
 #container {
